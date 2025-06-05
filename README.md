@@ -1,2 +1,2 @@
-# Casus-Reumato-Artritis
+# Casus-Reumatoide-Artritis
 Volgt.
