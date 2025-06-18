@@ -1,2 +1,3 @@
 # Casus-Reumatoide-Artritis
-Volgt.
+
+Korte uitleg over je project en wat je gedaan hebt
