@@ -1,3 +1,3 @@
 # Casus-Reumatoide-Artritis
 
-Korte uitleg over je project en wat je gedaan hebt
+	Korte samenvatting van je project: doel, werkwijze, resultaten, structuur
