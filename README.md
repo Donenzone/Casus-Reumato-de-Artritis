@@ -40,9 +40,9 @@ Het volledige script is beschikbaar in [`Scripts/`](Scripts/). Een overzicht van
 ## Resultaten  
 De analyse identificeerde meerdere genen met significant veranderde expressie tussen RA-patiënten en controles. Veel genen met hoge log2 fold changes zijn betrokken bij ontstekings- en immuunprocessen, conform bekende RA-pathologie.  
 
-- De volcano plot is te bekijken in [`Results/VolcanoplotWC.png`](Results/VolcanoplotWC.png).  
+- De volcano plot is te bekijken in [`Resultaten/Deseq2_results/Volcanoplot.png.png`](Resultaten/Deseq2_results/Volcanoplot.png.png).  
 - KEGG-pathway voor reumatoïde artritis (hsa05323) toont duidelijke expressieveranderingen.  
-- Top 10 GO-processen, waaronder "immune response" en "inflammatory response", staan in [`Results/top10_GO.csv`](Results/top10_GO.csv) en zijn gevisualiseerd in [`Results/GOplot.png`](Results/GOplot.png).  
+- Top 10 GO-processen, waaronder "immune response" en "inflammatory response", staan in [`Resultaten/Pathway_analysis_results/GO_BP_resultaten.csv`](Resultaten/Pathway_analysis_results/GO_BP_resultaten.csv) en zijn gevisualiseerd in [`Results/GOplot.png`](Results/GOplot.png).  
 
 Deze bevindingen onderstrepen de kracht van transcriptomics om ziektegerelateerde mechanismen te identificeren.
 
