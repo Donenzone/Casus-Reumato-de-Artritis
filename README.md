@@ -59,6 +59,7 @@ Deze studie bevestigt dat RNA-sequencing een krachtig hulpmiddel is om complexe 
 Voor toekomstig onderzoek wordt aanbevolen om deze transcriptomics-resultaten te combineren met proteomics en grotere, longitudinale datasets om ziekteprogressie beter te begrijpen. Daarnaast is gestructureerd beheer van data en scripts, bijvoorbeeld via GitHub, essentieel voor transparantie en reproduceerbaarheid van onderzoek.
 
 Dit project illustreert niet alleen de wetenschappelijke waarde van transcriptomics bij RA, maar ook het belang van goede data stewardship en versiebeheer voor betrouwbaar wetenschappelijk onderzoek.
+
 ---
 
 ## Data Stewardship & Beheer
