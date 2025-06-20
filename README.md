@@ -34,8 +34,7 @@ Daarna is een kwaliteitscontrole uitgevoerd waarbij genen met lage expressie zij
 De gevonden differentieel geëxprimeerde genen (DEGs) zijn geannoteerd en vervolgens onderworpen aan functionele analyses. Hiervoor is gebruikgemaakt van KEGG-pathwayanalyse via het pakket Pathview en Gene Ontology (GO) verrijkingsanalyse met goseq. Deze laatste houdt rekening met bias zoals genlengte.
 
 Alle R-scripts voor deze stappen zijn te vinden in de map [Scripts/](Scripts/).  
-Een visueel overzicht van de workflow is opgenomen in [Assets/Workflow_Flowschema](Assets
-/Workflow_Flowschema).
+Een visueel overzicht van de workflow is opgenomen in [Assets/Workflow_Flowschema](Assets/Workflow_Flowschema).
 
 ---
 
