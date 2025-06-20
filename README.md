@@ -46,7 +46,6 @@ De differentiële genexpressie-analyse tussen synovium van RA-patiënten en gezo
 Een volcano plot visualiseert de spreiding van genen op basis van significatie en expressieverandering [Results/VolcanoplotWC.png](Resultaten/Deseq2_results/Volcanoplot.png.png).
 erder werd een KEGG-pathwayanalyse uitgevoerd, waarbij onder andere de pathway ‘reumatoïde artritis’ (hsa05323) sterk verrijkt bleek. Deze resultaten zijn zichtbaar in [Results/hsa05323.pathview.png](Resultaten/Pathway_analysis_results/hsa05323.pathview.png).
 Gene Ontology-analyse toonde verrijking in biologische processen zoals immuunrespons, ontsteking, en celactivatie. De top 10 GO-processen zijn gedocumenteerd in [Results/top10_GO.csv](Resultaten/Pathway_analysis_results/GO_BP_resultaten.csv) en visueel samengevat in [Results/GOplot.png](Resultaten/Pathway_analysis_results/GO_plot_zoom_png.png).
-
 Deze bevindingen bevestigen het belang van immuun- en ontstekingsmechanismen bij RA en onderstrepen het nut van transcriptomics voor het ontrafelen van ziekteprocessen.
 
 ---
