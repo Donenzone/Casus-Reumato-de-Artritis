@@ -4,13 +4,13 @@
 
 | Map / Bestand         | Inhoud                                                                                      |
 |----------------------|---------------------------------------------------------------------------------------------|
-| `data/raw/`          | Ruwe of originele inputdata (bijv. `count_matrix.txt`)                                    |
-| `data/processed/`    | Bewerkt of gefilterd materiaal (bijv. `bewerkt_countmatrix.csv`)                           |
-| `scripts/`           | R-scripts die de analyse uitvoeren                                                         |
-| `results/`           | Visualisaties en outputbestanden, zoals `VolcanoplotWC.png`, `top10_GO.csv`                 |
+| `Data/Raw/`          | Ruwe of originele inputdata (bijv. `Count_matrix.txt`)                                    |
+| `Data/Processed/`    | Bewerkt of gefilterd materiaal (bijv. `Bewerkt_countmatrix.csv`)                           |
+| `Scripts/`           | R-scripts die de analyse uitvoeren                                                         |
+| `Results/`           | Visualisaties en outputbestanden, zoals `VolcanoplotWC.png`, `top10_GO.csv`                 |
 | `Bronnen/`           | Wetenschappelijke literatuur en casusmateriaal                                            |
-| `assets/`            | Afbeeldingen gebruikt in README of verslag                                                |
-| `data_stewardship/`  | Documentatie over toepassing van de competentie *beheren*                                |
+| `Assets/`            | Afbeeldingen gebruikt in README of verslag                                                |
+| `Data_stewardship/`  | Documentatie over toepassing van de competentie *beheren*                                |
 | `README.md`          | Dit bestand                                                                                |
 
 ---
@@ -20,7 +20,7 @@ Reumatoïde artritis (RA) is een systemische auto-immuunziekte waarbij het immuu
 
 In deze casus is RNA-sequencing toegepast op synoviumbiopten van vier RA-patiënten (ACPA-positief) en vier gezonde controles. Het doel is genexpressieverschillen te analyseren, ziekte-gerelateerde genen te identificeren en biologische processen en pathways te koppelen aan RA. Transcriptomics verschaft inzicht in de moleculaire mechanismen van deze aandoening.  
 
-De gebruikte bronnen zijn te vinden in de map [`bronnen/`](bronnen/).
+De gebruikte bronnen zijn te vinden in de map [`Bronnen/`](Bronnen/).
 
 ---
 
@@ -33,16 +33,16 @@ De differentieel geëxprimeerde genen (DEGs) zijn geannoteerd en gebruikt voor f
 - KEGG-pathwayanalyse met **Pathview**  
 - Gene Ontology (GO) verrijkingsanalyse met **goseq**, rekening houdend met genlengte-bias  
 
-Het volledige script is beschikbaar in [`scripts/`](scripts/). Een overzicht van de workflow is te vinden in [`assets/Flowschema_Analyse.png`](assets/Flowschema_Analyse.png).
+Het volledige script is beschikbaar in [`Scripts/`](Scripts/). Een overzicht van de workflow is te vinden in [`Assets/Flowschema_Analyse.png`](Assets/Flowschema_Analyse.png).
 
 ---
 
 ## Resultaten  
 De analyse identificeerde meerdere genen met significant veranderde expressie tussen RA-patiënten en controles. Veel genen met hoge log2 fold changes zijn betrokken bij ontstekings- en immuunprocessen, conform bekende RA-pathologie.  
 
-- De volcano plot is te bekijken in [`results/VolcanoplotWC.png`](results/VolcanoplotWC.png).  
+- De volcano plot is te bekijken in [`Results/VolcanoplotWC.png`](Results/VolcanoplotWC.png).  
 - KEGG-pathway voor reumatoïde artritis (hsa05323) toont duidelijke expressieveranderingen.  
-- Top 10 GO-processen, waaronder "immune response" en "inflammatory response", staan in [`results/top10_GO.csv`](results/top10_GO.csv) en zijn gevisualiseerd in [`results/GOplot.png`](results/GOplot.png).  
+- Top 10 GO-processen, waaronder "immune response" en "inflammatory response", staan in [`Results/top10_GO.csv`](Results/top10_GO.csv) en zijn gevisualiseerd in [`Results/GOplot.png`](Results/GOplot.png).  
 
 Deze bevindingen onderstrepen de kracht van transcriptomics om ziektegerelateerde mechanismen te identificeren.
 
@@ -58,7 +58,7 @@ Dit project benadrukt tevens het belang van gestructureerd data- en scriptbeheer
 ---
 
 ## Data Stewardship & Beheer  
-Voor een toelichting op het beheer van data en het toepassen van versiecontrole met GitHub, zie de bestanden in [`data_stewardship/`](data_stewardship/).
+Voor een toelichting op het beheer van data en het toepassen van versiecontrole met GitHub, zie de bestanden in [`Data_stewardship/`](Data_stewardship/).
 
 ---
 
