@@ -9,7 +9,7 @@
 | `Scripts/`           | R-scripts die de analyse uitvoeren                                                         |
 | `Results/`           | Visualisaties en outputbestanden, zoals `VolcanoplotWC.png`, `top10_GO.csv`                 |
 | `Bronnen/`           | Wetenschappelijke literatuur en casusmateriaal                                            |
-| `Assets/`            | Afbeeldingen gebruikt in README of verslag                                                |
+| `Assets/`            | Flowschema & Workflow verslag                                                |
 | `Data_stewardship/`  | Documentatie over toepassing van de competentie *beheren*                                |
 | `README.md`          | Dit bestand                                                                                |
 
@@ -33,7 +33,7 @@ De differentieel geëxprimeerde genen (DEGs) zijn geannoteerd en gebruikt voor f
 - KEGG-pathwayanalyse met **Pathview**  
 - Gene Ontology (GO) verrijkingsanalyse met **goseq**, rekening houdend met genlengte-bias  
 
-Het volledige script is beschikbaar in [`Scripts/`](Scripts/). Een overzicht van de workflow is te vinden in [`Assets/Flowschema_Analyse.png`](Assets/Flowschema_Analyse.png).
+Het volledige script is beschikbaar in [`Scripts/`](Scripts/). Een overzicht van de workflow is te vinden in [`Assets/Workflow_Flowschema`](Assets/Workflow_Flowschema).
 
 ---
 
