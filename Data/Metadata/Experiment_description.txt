@@ -1,0 +1,19 @@
+Titel: Transcriptomics-analyse van synoviumbiopten bij Reumatoïde Artritis
+
+Beschrijving:
+Reumatoïde Artritis (RA) is een systemische auto-immuunziekte waarbij synovitis – een ontsteking van het gewrichtsslijmvlies – leidt tot gewrichtsschade. Voor dit onderzoek zijn biopten uit het synovium genomen van 4 personen met RA (diagnose >12 maanden) en 4 controlepersonen zonder RA. Alle RA-patiënten zijn positief getest op ACPA (anti-CCP), een veelgebruikte biomarker voor RA.
+
+Doel:
+Inzicht krijgen in genexpressieverschillen tussen RA-patiënten en controlepersonen. Daarnaast worden betrokken genen en pathways geanalyseerd via Gene Ontology (GO) en KEGG-pathwayanalyse.
+
+Samples:
+- 4 synoviumbiopten van RA-patiënten (vrouwelijk, 54–66 jaar, ACPA-positief)
+- 4 synoviumbiopten van gezonde controles (vrouwelijk, 15–42 jaar, ACPA-negatief)
+
+Analyse:
+- Transcriptomics-analyse van RNA-seq data
+- Differential expression analyse met DESeq2
+- GO-analyse met goseq
+- KEGG pathway-analyse met pathview
+
+Brondata afkomstig uit: Platzer et al., 2019 (PLoS ONE)
