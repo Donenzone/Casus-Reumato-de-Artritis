@@ -7,7 +7,7 @@
 | [Data/Raw/](Data/Raw/)             | Ruwe of originele inputdata (bijv. `Count_matrix.txt`)                                      |
 | [Data/Processed/](Data/Processed/) | Bewerkt of gefilterd materiaal (bijv. `Bewerkt_countmatrix.csv`)                            |
 | [Scripts/](Scripts/)               | R-scripts die de analyse uitvoeren                                                          |
-| [Results/](Results/)               | Visualisaties en outputbestanden, zoals `VolcanoplotWC.png`, `top10_GO.csv`                |
+| [Resultaten/](Resultaten/)               | Visualisaties en outputbestanden, zoals `VolcanoplotWC.png`, `top10_GO.csv`                |
 | [Bronnen/](Bronnen/)               | Wetenschappelijke literatuur en casusmateriaal                                              |
 | [Assets/](Assets/)                 | Flowschema & workflow-verslag                                                               |
 | [Data_stewardship/](Data_stewardship/) | Documentatie over toepassing van de competentie *Beheren*                               |
