@@ -1,58 +1,41 @@
-Inhoud / structuur
+Inhoud en Structuur van de Repository
 Map / Bestand	Inhoud
-data/raw/	Ruwe of originele inputdata (zoals count_matrix.txt)
-data/processed/	Bewerkt of gefilterd materiaal zoals bewerkt_countmatrix.csv
+data/raw/	Ruwe of originele inputdata, zoals count_matrix.txt
+data/processed/	Bewerkt of gefilterd materiaal, bijvoorbeeld bewerkt_countmatrix.csv
 scripts/	Alle R-scripts die de analyse uitvoeren
-resultaten/	Volcano plot, resultaten CSV’s, GO-analyses
-bronnen/	Wetenschappelijke literatuur en casusmateriaal
+results/	Visualisaties zoals volcano plots, resultaten in CSV-formaat, GO-analyses
+sources/	Wetenschappelijke literatuur en casusmateriaal
 assets/	Afbeeldingen voor README of verslag
-data_stewardship/	Beschrijving van hoe je de competentie beheren hebt toegepast
-README.md	Dit bestand
+data_stewardship/	Beschrijving van de toepassing van de competentie beheren
+README.md	Dit bestand met een overzicht van de inhoud en toelichting van het project
 
+Inleiding
+Reumatoïde artritis (RA) is een systemische auto-immuunziekte waarbij het immuunsysteem het eigen lichaam aanvalt, met name het synoviaal weefsel in de gewrichten. Dit leidt tot synovitis, een ontsteking van het gewrichtsslijmvlies, die op den duur chronische pijn en gewrichtsschade veroorzaakt. De precieze oorzaak van RA is nog niet volledig bekend, maar een combinatie van genetische aanleg, omgevingsfactoren en een dysfunctie van het immuunsysteem speelt een belangrijke rol (Gabriel, 2001; Radu & Bungau, 2021). Vroege diagnose en adequate behandeling zijn cruciaal om blijvende schade te beperken.
 
+In deze casus is RNA-sequencing toegepast op synoviumbiopten van vier RA-patiënten (positief voor ACPA) en vier gezonde controles. Het doel is om verschillen in genexpressie tussen de groepen te analyseren, genen te identificeren die mogelijk bijdragen aan de ziekte, en de betrokken biologische processen en pathways in kaart te brengen. Met behulp van transcriptomics wordt zo meer inzicht verkregen in de moleculaire mechanismen achter RA.
 
-1. Inleiding
+De gebruikte wetenschappelijke bronnen en casusmateriaal zijn terug te vinden in de map /sources/.
 
-Reumatoïde artritis (RA) is een systemische auto-immuunziekte waarbij het immuunsysteem het eigen lichaam aanvalt, met name het synoviaal weefsel van gewrichten. Kenmerkend is synovitis: een ontsteking van het gewrichtsslijmvlies die leidt tot chronische pijn en gewrichtsschade. Hoewel de exacte oorzaak onbekend is, speelt een combinatie van genetische aanleg, omgevingsfactoren en een ontspoord immuunsysteem een rol (Gabriel, 2001; Radu & Bungau, 2021). Vroege diagnose en behandeling zijn essentieel om schade te beperken.
+Methode
+De RNA-seq data van de 8 samples (4 RA, 4 controles) zijn eerst uitgelijnd op het humane referentiegenoom (GRCh38) met behulp van het R-pakket Rsubread. Vervolgens zijn gen-tellingen bepaald met featureCounts, gebruikmakend van het bijbehorende GTF-annotatiebestand.
 
-In deze casus is RNA-sequencing toegepast op synoviumbiopten van vier RA-patiënten (positief voor ACPA) en vier gezonde controles. Het doel is om genexpressieverschillen te analyseren, betrokken genen te identificeren, en biologische processen en pathways te koppelen aan RA. Door gebruik te maken van transcriptomics-technieken wordt inzicht verkregen in de onderliggende moleculaire mechanismen.
+Na de pre-processing is de differentiële genexpressie-analyse uitgevoerd met DESeq2. Hierbij werden laag-exprimerende genen verwijderd en de data genormaliseerd om verschillen in sequencingdiepte te corrigeren. Voor elk gen zijn log2 fold changes en p-waarden berekend, waarbij genen met een adjusted p-waarde < 0.05 en een absolute log2 fold change > 1 als significant zijn aangemerkt.
 
-De gebruikte bronnen zijn terug te vinden in de map [`/bronnen`](./bronnen), waaronder wetenschappelijke artikelen en handleidingen uit de werkcolleges.
+De significant differentieel geëxprimeerde genen (DEGs) zijn geannoteerd met EntrezID’s en gebruikt voor functionele analyses. Pathway-analyse is gedaan met KEGG Pathview, waarmee veranderingen in genexpressie binnen bekende biologische routes zijn gevisualiseerd. Daarnaast is een Gene Ontology (GO) verrijkingsanalyse uitgevoerd met het R-pakket goseq, dat bias door genlengte corrigeert.
 
+Alle scripts voor de analyse, inclusief commentaar en workflow, zijn beschikbaar in de map /scripts/. Een overzichtelijke flowchart van de analyseworkflow is te vinden in /assets/Flowschema_Analyse.png.
 
- 2. Methode
+Resultaten
+De analyse toonde een aantal genen met significant verschillende expressie tussen RA-patiënten en gezonde controles. Diverse genen met hoge log2 fold changes zijn betrokken bij ontstekings- en immuunprocessen, wat overeenkomt met de bekende pathofysiologie van RA.
 
-De analyse werd uitgevoerd in R. Allereerst werden de sequencing reads van de 8 samples (4 RA, 4 controles) uitgelijnd op het humane referentiegenoom (GRCh38) met behulp van het `Rsubread`-pakket. Daarna werden tellingen per gen gegenereerd met `featureCounts`, waarbij het bijbehorende GTF-annotatiebestand werd gebruikt.
+De volcano plot (opgeslagen als /results/VolcanoplotWC.png) visualiseert het onderscheid tussen genen met verhoogde en verlaagde expressie. De KEGG-pathway voor reumatoïde artritis (hsa05323) toont duidelijke expressieveranderingen in meerdere pathway-genen. GO-analyse identificeerde de top 10 verrijkte biologische processen, waaronder “immune response” en “inflammatory response”, welke zijn weergegeven in een dotplot (/results/GOplot.png) en in tabelvorm in /results/top10_GO.csv.
 
-Na pre-processing is een differentiële genexpressie-analyse uitgevoerd met het `DESeq2`-pakket. Hierbij werd voor elk gen het verschil in expressie tussen de RA-groep en controle berekend, inclusief log2FoldChange en p-waarden. Genen met een p-adj < 0.05 en |log2FC| > 1 werden als significant beschouwd.
+Deze bevindingen bevestigen dat transcriptomics een krachtig instrument is om ziektegerelateerde genen en mechanismen te ontrafelen.
 
-Vervolgens werd pathway-analyse uitgevoerd met het `pathview`-pakket, waarbij log2FoldChange-waarden werden gekoppeld aan KEGG-pathways. Daarnaast werd met `goseq` een Gene Ontology (GO) analyse gedaan om overgerepresenteerde biologische processen te identificeren.
+Conclusie
+De transcriptomics-analyse van synoviumweefsel van RA-patiënten levert belangrijke inzichten op in de moleculaire processen die aan deze ziekte ten grondslag liggen. Door vergelijking met gezonde controles zijn meerdere differentieel geëxprimeerde genen en relevante biologische pathways geïdentificeerd, vooral gerelateerd aan ontsteking en immuunregulatie.
 
-Scripts, data en outputs zijn ondergebracht in de mappen `/scripts`, `/data`, en `/resultaten`, zodat de volledige analyse reproduceerbaar is. Zie ook het bestand [`data_stewardship.md`](./data_stewardship/data_stewardship.md) voor uitleg over databeheer.
+Deze resultaten bevestigen bestaande kennis over RA en illustreren de waarde van transcriptomics voor het ontrafelen van ziekteprocessen op moleculair niveau. Voor toekomstig onderzoek wordt aanbevolen om de genexpressiegegevens te combineren met proteomics en klinische data, en de analyse uit te breiden naar grotere patiëntengroepen en longitudinale datasets (bijvoorbeeld pre- en post-behandeling).
 
-
-3. Resultaten
-
-De differentiële genexpressie-analyse leverde meerdere genen op met een significant verschil tussen RA-patiënten en gezonde personen. Enkele genen met de hoogste log2FoldChange-waarden zijn betrokken bij ontstekingsprocessen en immuunregulatie, wat in lijn is met de bekende pathologie van RA. De resultaten zijn opgeslagen in [`ResultatenWC3.csv`](./resultaten/ResultatenWC3.csv).
-
-De volcano plot (zie [`VolcanoplotWC.png`](./resultaten/VolcanoplotWC.png)) toont de verdeling van log2FoldChange versus de p-waarde. Hieruit blijkt dat er genen zijn met sterk verhoogde of verlaagde expressie bij RA.
-
-Via `pathview` werd de KEGG-pathway voor reumatoïde artritis (hsa05323) gevisualiseerd. Meerdere genen in deze pathway vertoonden duidelijke expressieveranderingen. In de GO-analyse (via `goseq`) werden de top 10 overgerepresenteerde processen geïdentificeerd, waaronder "immune response" en "inflammatory response". Deze resultaten zijn gevisualiseerd in een dotplot (`GOplot.png`) en in tabelformaat opgeslagen in `top10_GO.csv`.
-
-Deze bevindingen ondersteunen het gebruik van transcriptomics om ziektegerelateerde genen en mechanismen te identificeren.
-
-
-
-4. Conclusie
-
-De transcriptomics-analyse van synoviumweefsel heeft waardevolle inzichten opgeleverd in de moleculaire processen die een rol spelen bij reumatoïde artritis. Door het vergelijken van genexpressie tussen RA-patiënten en gezonde controles zijn meerdere differentieel geëxprimeerde genen en bijbehorende pathways geïdentificeerd. Met name ontstekingsgerelateerde genen en immuunprocessen kwamen sterk naar voren in de analyses.
-
-Deze resultaten bevestigen bekende kenmerken van RA en laten zien dat transcriptomics geschikt is om ziekteprocessen op cellulair niveau te ontrafelen. Daarnaast tonen de KEGG- en GO-analyses aan dat betrokken genen zich groeperen in biologisch relevante netwerken.
-
-Aanbevolen wordt om vervolgonderzoek te doen op eiwitniveau (proteomics) om te bevestigen welke genen functioneel actief zijn in RA. Ook zou uitbreiding naar grotere datasets of tijdreeksen (bijv. voor en na behandeling) nog meer inzicht kunnen bieden.
-
-Tot slot toont dit project het belang aan van zorgvuldig data- en scriptbeheer: dankzij de heldere structuur en versiecontrole via GitHub is de gehele analyse reproduceerbaar en inzichtelijk voor anderen.
-
-
-
+Daarnaast benadrukt dit project het belang van zorgvuldig databeheer en versiecontrole, zoals geïmplementeerd met GitHub. Door een gestructureerde mappenindeling en documentatie is de volledige analyse reproduceerbaar en transparant.
 
