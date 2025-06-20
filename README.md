@@ -37,7 +37,8 @@ De differentieel geëxprimeerde genen (DEGs) zijn geannoteerd en gebruikt voor f
 - Gene Ontology (GO) verrijkingsanalyse met `goseq`, rekening houdend met genlengte-bias
 
 Het volledige script is beschikbaar in [Scripts/](Scripts/).  
-Een overzicht van de workflow is te vinden in [Assets/Workflow_Flowschema.png](Assets/Workflow_Flowschema.png).
+Een overzicht van de workflow is te vinden in [Assets/Workflow_Flowschema](Assets
+/Workflow_Flowschema).
 
 ---
 
@@ -47,9 +48,9 @@ De analyse identificeerde meerdere genen met significant veranderde expressie tu
 
 Belangrijkste bevindingen:
 
-- Volcano plot: [Results/VolcanoplotWC.png](Results/VolcanoplotWC.png)
-- KEGG-pathway voor reumatoïde artritis (hsa05323): visualisatie in [Results/hsa05323.pathview.png](Results/hsa05323.pathview.png)
-- Top 10 GO-processen: [Results/top10_GO.csv](Results/top10_GO.csv) en [Results/GOplot.png](Results/GOplot.png)
+- Volcano plot: [Results/VolcanoplotWC.png](Resultaten/Deseq2_results/Volcanoplot.png.png)
+- KEGG-pathway voor reumatoïde artritis (hsa05323): visualisatie in [Results/hsa05323.pathview.png](Resultaten/Pathway_analysis_results/hsa05323.pathview.png)
+- Top 10 GO-processen: [Results/top10_GO.csv](Resultaten/Pathway_analysis_results/GO_BP_resultaten.csv) en [Results/GOplot.png](Resultaten/Pathway_analysis_results/GO_plot_zoom_png.png)
 
 Deze bevindingen onderstrepen de kracht van transcriptomics om ziektegerelateerde mechanismen te identificeren.
 
