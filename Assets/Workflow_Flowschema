@@ -1,0 +1,35 @@
+1. Data-invoer
+   └── Inladen van ruwe count data (RA vs. controle)
+       └── Bestandstype: matrix (genen x samples)
+
+2. Preprocessing
+   ├── Filteren van laag-exprimerende genen
+   └── Annoteren van genen (bijv. omzetten naar EntrezID)
+
+3. Normalisatie
+   └── DESeq2 normalisatie (voor verschillen in library size)
+
+4. Differentiële expressieanalyse
+   └── DESeq2 analyse
+       ├── Statistische toetsing (Wald test)
+       └── Correctie voor multiple testing (Benjamini-Hochberg)
+
+5. Selectie van significante DEGs
+   └── Criteria:
+       ├── |log2 Fold Change| ≥ 1
+       └── Adjusted p-value < 0.05
+
+6. Functionele analyse
+   ├── GO-enrichment analyse met goseq
+   └── KEGG pathway-analyse met Pathview
+
+7. Visualisatie & Output
+   ├── MA-plot, Volcano plot
+   ├── GO-term grafieken
+   ├── KEGG pathway kaarten
+   └── Resultaten opgeslagen als CSV en PNG in /Results/
+
+8. Documentatie & Versiebeheer
+   ├── Scripts opgeslagen in /Scripts/
+   ├── Metadata en toelichting in /Documents/
+   └── Versiebeheer via GitHub (met commit-geschiedenis)
