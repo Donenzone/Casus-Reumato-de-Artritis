@@ -2,16 +2,17 @@
 
 ## Repository Structuur
 
-| Map / Bestand         | Inhoud                                                                                      |
-|----------------------|---------------------------------------------------------------------------------------------|
-| `Data/Raw/`          | Ruwe of originele inputdata (bijv. `Count_matrix.txt`)                                    |
-| `Data/Processed/`    | Bewerkt of gefilterd materiaal (bijv. `Bewerkt_countmatrix.csv`)                           |
-| `Scripts/`           | R-scripts die de analyse uitvoeren                                                         |
-| `Results/`           | Visualisaties en outputbestanden, zoals `VolcanoplotWC.png`, `top10_GO.csv`                 |
-| `Bronnen/`           | Wetenschappelijke literatuur en casusmateriaal                                            |
-| `Assets/`            | Flowschema & Workflow verslag                                                |
-| `Data_stewardship/`  | Documentatie over toepassing van de competentie *beheren*                                |
-| `README.md`          | Dit bestand                                                                                |
+| Map / Bestand          | Inhoud                                                                                      |
+|------------------------|---------------------------------------------------------------------------------------------|
+| [`Data/Raw/`](Data/Raw/)              | Ruwe of originele inputdata (bijv. `Count_matrix.txt`)                                                |
+| [`Data/Processed/`](Data/Processed/)  | Bewerkt of gefilterd materiaal (bijv. `Bewerkt_countmatrix.csv`)                                       |
+| [`Scripts/`](Scripts/)                | R-scripts die de analyse uitvoeren                                                                     |
+| [`Results/`](Results/)                | Visualisaties en outputbestanden, zoals `Volcanoplot.png`, `GO_BP_resultaten.csv`                      |
+| [`Bronnen/`](Bronnen/)                | Wetenschappelijke literatuur en casusmateriaal                                                         |
+| [`Assets/`](Assets/)                  | Flowschema & Workflow verslag                                                                          |
+| [`Data_stewardship/`](Data_stewardship/) | Documentatie over toepassing van de competentie *beheren*                                           |
+| [`README.md`](README.md)              | Dit bestand                                                                                             |
+
 
 ---
 
