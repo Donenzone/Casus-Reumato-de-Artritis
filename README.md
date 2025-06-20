@@ -42,7 +42,7 @@ De analyse identificeerde meerdere genen met significant veranderde expressie tu
 
 - De volcano plot is te bekijken in [`Volcanoplot.png`](Resultaten/Deseq2_results/Volcanoplot.png.png).  
 - KEGG-pathway voor reumatoïde artritis (hsa05323) toont duidelijke expressieveranderingen.  
-- Top 10 GO-processen, waaronder "immune response" en "inflammatory response", staan in [`GO_BP_resultaten.csv`](Resultaten/Pathway_analysis_results/GO_BP_resultaten.csv) en zijn gevisualiseerd in [`GOplot.png`](Results/GOplot.png).  
+- Top 10 GO-processen, waaronder "immune response" en "inflammatory response", staan in [`GO_BP_resultaten.csv`](Resultaten/Pathway_analysis_results/GO_BP_resultaten.csv) en zijn gevisualiseerd in [`GOplot.png`](Resultaten/Pathway_analysis_results/GO_plot_zoom_png.png).  
 
 Deze bevindingen onderstrepen de kracht van transcriptomics om ziektegerelateerde mechanismen te identificeren.
 
