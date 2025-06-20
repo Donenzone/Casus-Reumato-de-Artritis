@@ -8,7 +8,7 @@
 | `data/processed/`    | Bewerkt of gefilterd materiaal (bijv. `bewerkt_countmatrix.csv`)                           |
 | `scripts/`           | R-scripts die de analyse uitvoeren                                                         |
 | `results/`           | Visualisaties en outputbestanden, zoals `VolcanoplotWC.png`, `top10_GO.csv`                 |
-| `sources/`           | Wetenschappelijke literatuur en casusmateriaal                                            |
+| `Bronnen/`           | Wetenschappelijke literatuur en casusmateriaal                                            |
 | `assets/`            | Afbeeldingen gebruikt in README of verslag                                                |
 | `data_stewardship/`  | Documentatie over toepassing van de competentie *beheren*                                |
 | `README.md`          | Dit bestand                                                                                |
